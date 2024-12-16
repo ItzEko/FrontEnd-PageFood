@@ -5,7 +5,7 @@
     --color-background: #f4f9f5;
     --color-secundario: #f1f3f2;
     --color-hover: #006453;
-    --color-card: #ffffff; 
+    --color-card: #ffffff;
     --color-borde-section: #ddd;
 }
 
@@ -14,6 +14,8 @@ body {
     font-family: 'Georgia', serif;
     background-color: var(--color-background);
 }
+
+/* Animaciones */
 @keyframes typing {
     from {
         width: 0;
@@ -23,6 +25,27 @@ body {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardAnimation {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* General */
 h2 {
     overflow: hidden;
     white-space: nowrap;
@@ -30,7 +53,20 @@ h2 {
     animation: typing 3s steps(30) 1s forwards;
     font-size: 2em;
     color: var(--color-primario);
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
+
+.section-content {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-borde-section);
+    border-radius: 5px;
+}
+
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,11 +86,13 @@ h2 {
     padding: 5px 10px;
     transition: background-color 0.3s ease;
 }
-.navbar #buscador-input{
+
+.navbar #buscador-input {
     border-radius: 10px;
     font-size: 16px;
     outline: 0;
 }
+
 .logo {
     display: flex;
     justify-content: center;
@@ -70,6 +108,38 @@ h2 {
     border-radius: 5px;
 }
 
+/* Inicio */
+.inicio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.inicio-text p {
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5;
+    color: var(--color-texto);
+}
+
+.inicio-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 4px 7px var(--color-hover);
+}
+
+/* Menu */
 #menu {
     border: 3px solid var(--color-bordes);
     background-color: var(--color-secundario);
@@ -83,20 +153,14 @@ h2 {
     animation: fadeIn 1s forwards;
     animation-delay: 0.5s;
 }
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+
 .card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
+
 .card {
     display: inline-block;
     border: 2px solid var(--color-bordes);
@@ -109,16 +173,7 @@ h2 {
     opacity: 0;
     animation: cardAnimation 1s forwards;
 }
-@keyframes cardAnimation {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
 .card-img {
     width: 100%;
     height: auto;
@@ -130,48 +185,45 @@ h2 {
     font-size: 14px;
     color: var(--color-texto);
 }
-.section-content {
-    padding: 20px;
-    margin: 10px 0;
-    background-color: var(--color-card);
-    border: 1px solid var(--color-borde-section);
-    border-radius: 5px;
-}
-/* CSS de la parte de restaurant */
+
+/* Restaurante */
 .restaurant-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; 
+    gap: 20px;
     padding: 20px;
 }
+
 .restaurant-text {
     flex: 1;
     font-size: 1.2em;
     color: var(--color-texto);
 }
-.highlighted-text {
+
+.p-text {
     font-weight: bold;
     font-size: 1.5em;
     color: var(--color-primario);
     text-align: justify;
 }
+
 .restaurant-image-container {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.restaurant-img {
+
+.restaurant-image-container img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px var(--color-hover);
-    margin-bottom: 10px;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 4px 7px var(--color-hover);
 }
+
 .restaurant-btn {
     position: absolute;
     bottom: 10%;
@@ -184,15 +236,18 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .restaurant-btn:hover {
     background-color: var(--color-hover);
 }
+
 .restaurant-link {
     text-decoration: none;
     color: var(--color-card);
     font-weight: bold;
 }
 
-#footer{
+/* Footer */
+#footer {
     background-color: var(--color-primario);
 }
