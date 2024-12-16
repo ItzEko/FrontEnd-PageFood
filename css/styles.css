@@ -160,9 +160,10 @@ h2 {
 
 .card-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 10px;
+    padding: 10px;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
 }
 
 .card {
@@ -174,12 +175,12 @@ h2 {
     margin: 10px;
     text-align: center;
     background-color: var(--color-card);
-    opacity: 0;
-    animation: cardAnimation 1s forwards;
     padding: inherit;
     color: inherit;
     transition: transform 0.3s, background-color 0.3s;
+    scroll-snap-align: start; 
 }
+
 
 .card:hover{
     transform: scale(1.05);
@@ -300,6 +301,7 @@ h2 {
     height: 250px;
     background-color: var(--color-secundario);
     box-sizing: border-box;
+    transition: transform 0.3s, background-color 0.3s;
 }
 .bebida-card:hover{
     transform: scale(1.05);
