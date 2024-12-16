@@ -1,2 +1,2 @@
 # FrontEnd-PageFood
-Aqui se encuentra el proyecto de pagina web en este caso quise hacerla de mi autoria, una pagina web para vender comida 
+Aqui se encuentra el proyecto de pagina web en este caso quise hacerla de mi autoria, una pagina web para vender comida, donde opte por poner la mayoria de los temas que vimos en clase la verdad saco todos mis conocimientos de css, este proyecto fue un reto para mi al aprender mas sobre el diseño y ver como funcionan los componentes todo para dar una experiencia al usuario mas ligera y comoda.  
