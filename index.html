@@ -145,17 +145,28 @@
             </div>
         </section>
         <section class="section-content" id="contacto">
-            <p>contactanos
-            </p>
-            <form action="">
+            <p>Contáctanos</p>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
             </form>
         </section>
     </main>
     <footer>
         <div class="footer">
-            <p>PaageFood 2024</p>
-            <img src="./assets/img/logo.png" alt="">
-
+            <p>&copy; PageFood 2024 by Itzel Guzmán</p>
+            <img src="./assets/img/logo.png" alt="Logo">
         </div>
     </footer>
 </body>
