@@ -287,7 +287,7 @@ h2 {
     border-radius: 10%;
     padding: 20px;
     width: 200px;
-    height: 250px;
+    height: 280px;
     background-color: var(--color-secundario);
     box-sizing: border-box;
     transition: transform 0.3s, background-color 0.3s;
@@ -311,7 +311,11 @@ h2 {
 }
 
 /* Footer */
-#footer {
-    background-color: var(--color-primario);
+ #contacto{
+    background-color:#dae9e7;
     color: inherit;
+}
+footer{
+    
+    background-color: var(--color-hover);
 }
