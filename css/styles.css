@@ -46,18 +46,6 @@ h2 {
         opacity: 1;
     }
 }
-
-@keyframes cardAnimation {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* General */
 .section-content {
     padding: inherit;
@@ -162,7 +150,7 @@ h2 {
     display: flex;
     gap: 10px;
     padding: 10px;
-    overflow-x: auto; 
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
@@ -171,14 +159,15 @@ h2 {
     border: 2px solid var(--color-bordes);
     border-radius: 10px;
     overflow: hidden;
-    width: 30%;
+    width: 25%;
     margin: 10px;
     text-align: center;
     background-color: var(--color-card);
     padding: inherit;
     color: inherit;
     transition: transform 0.3s, background-color 0.3s;
-    scroll-snap-align: start; 
+    scroll-snap-align: start;
+    flex-shrink: 0;
 }
 
 
